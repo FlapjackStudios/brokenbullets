@@ -1,0 +1,100 @@
+<html><head><base href="/">
+<title>Tactical Minimalism</title>
+<style>
+:root {
+  --accent: #00ff41;
+  --bg: #0a0a0a;
+  --text: #e0e0e0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+h1::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 2px;
+  background: var(--accent);
+  animation: pulse 2s infinite;
+}
+
+p {
+  color: var(--text);
+  font-size: 1.2rem;
+  max-width: 600px;
+  opacity: 0.8;
+}
+
+.coming-soon {
+  font-size: 0.8rem;
+  margin-top: 2rem;
+  opacity: 0.6;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.blink {
+  width: 5px;
+  height: 15px;
+  background: var(--accent);
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes pulse {
+  0% { width: 50px; }
+  50% { width: 100px; }
+  100% { width: 50px; }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  p {
+    font-size: 1rem;
+  }
+}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1>BROKEN BULLETS</h1>
+  <p>Get to the bottom of this, and whatever you do... don't. let. go.</p>
+  <div class="coming-soon">
+    Coming soon<div class="blink"></div>
+  </div>
+</body></html>
